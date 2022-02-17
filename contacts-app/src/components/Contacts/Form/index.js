@@ -5,10 +5,6 @@ const initialFormValue = { fullname: "", phone_number: "" }
 function Form({ addContact, contacts }) {
     const [form, setform] = useState(initialFormValue);
 
-    useEffect(() => {
-        setform(initialFormValue)
-    }, [contacts])
-
     const onChangeInput = (e) => {
         setform({ ...form, [e.target.name]: e.target.value })
     }
@@ -21,6 +17,7 @@ function Form({ addContact, contacts }) {
         }
 
         addContact([...contacts, form])
+        setform(initialFormValue)
     };
 
     return (

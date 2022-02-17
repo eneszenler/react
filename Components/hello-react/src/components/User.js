@@ -1,43 +1,17 @@
 import PropTypes from "prop-types";
+import { Component } from "react";
 
-function User({name, surname, isLogged, age, friends, address}) {
-    if (!isLogged) {
-            return <div>Giriş Yapmadınız</div>
-        }
-    
+function User({ name, surname, isLogged, age, friends, address }) {
     return (
         <>
-            <h1>
-                {name} {surname} {age}
-                <br />
-                {address.city} {address.zip}
-            </h1>
+
             <ul>
-                {
-                    friends.map((friend, index) => <li key={index}>{`${friend.name} ${friend.surname}`}</li>)
-                }
+                <li>İsim: {name}</li>
+                <li>Soyisim: {surname}</li>
+                <li>Yaş: {age}</li>
             </ul>
         </>
     )
-}
-
-User.propTypes = {
-    name: PropTypes.string.isRequired,
-    surname: PropTypes.string,
-    age: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string
-    ]),
-    isLogged: PropTypes.bool,
-    friends: PropTypes.array,
-    address: PropTypes.shape({
-        city: PropTypes.string,
-        zip: PropTypes.string
-    })
-}
-
-User.defaultProps = {
-    isLogged: true,
 }
 
 export default User;

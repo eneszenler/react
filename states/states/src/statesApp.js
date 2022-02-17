@@ -2,7 +2,7 @@ import { useState } from "react";
 import Counter from "./components/statesCounter";
 import InputExample from "./components/statesInputExample";
 
-function App() {
+function States() {
   const [name, setname] = useState("Yusuf");
   const [age, setage] = useState(21);
   const [friends, setfriends] = useState(["Ahmet", "Burak"])
@@ -11,7 +11,7 @@ function App() {
   console.log(age, name);
 
   return (
-    <div className="App">
+    <div className="States">
       <h1>Merhaba {name}</h1>
       <h1>{age}</h1>
 
@@ -41,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default States;

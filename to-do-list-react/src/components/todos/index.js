@@ -24,7 +24,7 @@ function Todos() {
 
     const [todos, setTodos] = useState(defaultList);
     const [active, setActive] = useState(defaultList)
-    const [completed, setCompleted] = useState([])
+    const [completed, setCompleted] = useState([{todo:"",status:""}])
     const [filteredList, setfilteredList] = useState(todos)
 
     useEffect(() => {

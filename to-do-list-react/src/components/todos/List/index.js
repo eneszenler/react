@@ -10,6 +10,13 @@ function List({ todos, active, completed, delTodos, setCompleted, setActive, fil
         setfilteredList(temp)
     }
 
+    const addCompletedItem = i => {
+        const comp = [...active];
+        const deletedItem = comp.splice(i,1);
+        setActive(comp)
+        setCompleted(deletedItem)
+    }
+
     const filtered = filteredList;
 
     return (
@@ -22,7 +29,7 @@ function List({ todos, active, completed, delTodos, setCompleted, setActive, fil
                             <div className="li-container">
                                 <span>
                                     <span className="round">
-                                        <input type="checkbox" />
+                                        <input type="checkbox" name="todo" onClick={() => addCompletedItem(i)}/>
                                         <label></label>
                                     </span>
                                     <span className="textSub">
