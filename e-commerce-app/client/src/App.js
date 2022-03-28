@@ -13,7 +13,9 @@ import HomePanel from "./pages/Panel/Home/Home";
 import ProductsPanel from "./pages/Panel/Products/Products";
 import ProductDetailPanel from "./pages/Panel/Products/ProductDetail";
 import OrdersPanel from "./pages/Panel/Orders/Orders";
+import OrderDetail from "./pages/Panel/Orders/OrdersDetail";
 import NewProduct from "./pages/Panel/Products/NewProduct";
+import MyOrders from "./pages/MyOrders";
 
 function App() {
   return (
@@ -44,10 +46,12 @@ function App() {
           <Route path="products/new-product" element={<NewProduct />} />
           <Route path="products/:product_id" element={<ProductDetailPanel />} />
           <Route path="orders" element={<OrdersPanel />} />
+          <Route path="orders/:order_id" element={<OrderDetail />} />
         </Route>
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/basket" element={<Basket />} />
+        <Route path="/profile/orders/:user_id" element={<MyOrders />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Router>

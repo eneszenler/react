@@ -66,6 +66,7 @@ function Signup() {
                   onBlur={formik.handleBlur}
                   value={formik.values.name}
                   isInvalid={formik.touched.name && formik.errors.name}
+                  bg="#fff"
                 />
               </FormControl>
               <FormControl>
@@ -76,6 +77,7 @@ function Signup() {
                   onBlur={formik.handleBlur}
                   value={formik.values.surname}
                   isInvalid={formik.touched.surname && formik.errors.surname}
+                  bg="#fff"
                 />
               </FormControl>
               <FormControl>
@@ -86,6 +88,7 @@ function Signup() {
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
                   isInvalid={formik.touched.email && formik.errors.email}
+                  bg="#fff"
                 />
               </FormControl>
               <FormControl>
@@ -97,6 +100,7 @@ function Signup() {
                   onBlur={formik.handleBlur}
                   value={formik.values.password}
                   isInvalid={formik.touched.password && formik.errors.password}
+                  bg="#fff"
                 />
               </FormControl>
               <FormControl>
@@ -110,6 +114,7 @@ function Signup() {
                   isInvalid={
                     formik.touched.passwordConfirm && formik.errors.passwordConfirm
                   }
+                  bg="#fff"
                 />
               </FormControl>
 

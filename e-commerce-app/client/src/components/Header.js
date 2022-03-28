@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {Button, Container, Flex, Heading, Text} from "@chakra-ui/react";
 import {useAuth} from "../contexts/AuthContext";
 import {useBasket} from "../contexts/BasketContext";
+import {BsBasket3Fill} from "react-icons/bs";
 
 function Header() {
   const {loggedIn, user} = useAuth();
@@ -31,7 +32,7 @@ function Header() {
               <>
                 <Link to="/basket">
                   <Button bg="#FF2E63" color="#fff">
-                    Basket ({items.length})
+                    <BsBasket3Fill /> ({items.length})
                   </Button>
                 </Link>
                 <Link to="/signin">
@@ -51,7 +52,7 @@ function Header() {
                 {items.length > 0 && (
                   <Link to="/basket">
                     <Button bg="#FF2E63" color="#fff">
-                      Basket ({items.length})
+                      <BsBasket3Fill /> ({items.length})
                     </Button>
                   </Link>
                 )}

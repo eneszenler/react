@@ -14,6 +14,7 @@ import {
   Heading,
   Button,
 } from "@chakra-ui/react";
+import {Link} from "react-router-dom";
 
 function Orders() {
   const {isLoading, isError, data} = useQuery("admin:orders", fetchOrders);
@@ -31,7 +32,7 @@ function Orders() {
   return (
     <div>
       <Heading mt={10}>Orders</Heading>
-      <Table variant="simple" mt={5} size="sm">
+      <Table variant="simple" mt={5} size="sm" backgroundColor="#fff">
         <TableCaption>Orders</TableCaption>
         <Thead>
           <Tr>
@@ -47,12 +48,14 @@ function Orders() {
               return (
                 <Tr key={i}>
                   <Td>{item.user.email}</Td>
-                  <Td>{item.adress}</Td>
+                  <Td>{item.address}</Td>
                   <Td>{item.items.length}</Td>
                   <Td style={{textAlign: "right"}}>
-                    <Button bg="#FF2E63" color="#fff">
-                      Detail
-                    </Button>
+                    <Link to={`/panel/orders/${item._id}`}>
+                      <Button bg="#FF2E63" color="#fff">
+                        Detail
+                      </Button>
+                    </Link>
                   </Td>
                 </Tr>
               );

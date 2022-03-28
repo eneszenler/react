@@ -27,6 +27,14 @@ function Card({item}) {
       textAlign="center"
     >
       <Link to={`/product/${item._id}`}>
+        <Box p="4">
+          <Box>
+            <Heading size="lg">{item.title}</Heading>
+          </Box>
+          <Box fontSize="20px" lineHeight="tight" maxHeight="50px" minHeight="50px">
+            {item.description}
+          </Box>
+        </Box>
         <Image
           src={item.photos[0]}
           alt="product"
@@ -35,22 +43,9 @@ function Card({item}) {
           height="65%"
           objectFit="cover"
         ></Image>
-        <Box p="4">
-          <Box mt="1">
-            <Heading size="lg">{item.title}</Heading>
-          </Box>
-          <Box
-            mt="1"
-            fontSize="20px"
-            lineHeight="tight"
-            maxHeight="50px"
-            minHeight="50px"
-          >
-            {item.description}
-          </Box>
-        </Box>
       </Link>
-      <Flex>
+
+      <Flex mt="2">
         <Button bg="#252A34" color="#fff" variant="solid" marginRight="2" fontSize="22px">
           {item.price} ₺
         </Button>

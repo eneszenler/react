@@ -30,6 +30,7 @@ const UserSchema = new Schema({
     default: "user",
     enum: ["user", "admin"],
   },
+  items: [],
 });
 
 UserSchema.pre("save", async function (next) {

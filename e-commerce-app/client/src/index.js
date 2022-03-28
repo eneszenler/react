@@ -26,13 +26,12 @@ ReactDOM.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <ChakraProvider>
-        <BasketProvider>
-          <AuthProvider>
+        <AuthProvider>
+          <BasketProvider>
             <App />
-          </AuthProvider>
-        </BasketProvider>
+          </BasketProvider>
+        </AuthProvider>
       </ChakraProvider>
-      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById("root")

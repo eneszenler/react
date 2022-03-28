@@ -25,7 +25,7 @@ function Products() {
   return (
     <>
       <Header />
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" marginTop="10px">
         <Grid templateColumns="repeat(3,1fr)" gap={4}>
           {data.pages.map((group, i) => (
             <React.Fragment key={i}>

@@ -24,6 +24,7 @@ import {
   UnorderedList,
   ListItem,
   Textarea,
+  Heading,
 } from "@chakra-ui/react";
 import {useBasket} from "../contexts/BasketContext";
 import {postOrder} from "../api";
@@ -124,19 +125,27 @@ function Basket() {
                       borderRadius="lg"
                       overflow="hidden"
                       p="3"
+                      bg="#fff"
+                      style={{minHeight: "500px", maxHeight: "500px"}}
+                      textAlign="center"
                     >
                       <Link to={`/product/${item._id}`}>
-                        <Image
-                          src={item.photos[0]}
-                          alt="product"
-                          loading="lazy"
-                          width="100%"
-                        ></Image>
+                        <Box maxHeight="65%">
+                          <Image
+                            src={item.photos[0]}
+                            alt="product"
+                            loading="lazy"
+                            width="100%"
+                            objectFit="cover"
+                            maxHeight="300px"
+                            minHeight="300px"
+                          ></Image>
+                        </Box>
                         <Box p="6">
                           <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
-                            {item.title}
+                            <Heading size="lg">{item.title}</Heading>
                           </Box>
-                          <Box>{item.price} TL</Box>
+                          <Box>{item.price} ₺</Box>
                         </Box>
                       </Link>
                       <Button

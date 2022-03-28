@@ -61,6 +61,7 @@ function Signin({history}) {
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
                   isInvalid={formik.touched.email && formik.errors.email}
+                  bg="#fff"
                 />
               </FormControl>
               <FormControl>
@@ -72,6 +73,7 @@ function Signin({history}) {
                   onBlur={formik.handleBlur}
                   value={formik.values.password}
                   isInvalid={formik.touched.password && formik.errors.password}
+                  bg="#fff"
                 />
               </FormControl>
 

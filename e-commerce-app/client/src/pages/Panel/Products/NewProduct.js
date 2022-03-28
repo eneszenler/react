@@ -53,9 +53,9 @@ function NewProduct() {
 
       <Formik
         initialValues={{
-          title: "data.title",
-          description: "data.description",
-          price: "data.price",
+          title: "",
+          description: "",
+          price: "",
           photos: [],
         }}
         // validationSchema={validationSchema}
